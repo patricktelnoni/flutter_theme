@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:theme/CustomButton.dart';
 import 'package:theme/themedark.dart';
 import 'package:theme/themelight.dart';
 import 'SecondScreen.dart';
@@ -32,10 +33,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String teksButton = "";
 
   void _incrementCounter() {
     setState(() {
-
       _counter++;
     });
   }
@@ -59,11 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
             ),
             Text(
-              '$_counter',
+              'Custom text',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             TextButton(
-                onPressed: () =>{
+                onPressed: () => {
                   Navigator.push(context, 
                       MaterialPageRoute(builder: (context) => SecondScreen()))
                 },
@@ -72,6 +73,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               style: Theme.of(context).textButtonTheme.style,
             ),
+            CustomButton(
+                textData: "Sido Muncul",
+            ),
+            CustomButton(
+                textData: "Tombol ketiga",
+            )
+
           ],
         ),
       ),

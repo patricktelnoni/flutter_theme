@@ -20,7 +20,7 @@ ThemeData lightTheme = ThemeData(
   ),
   colorScheme: ColorScheme.fromSeed(
       seedColor: Colors.blue.shade100,
-      brightness: Brightness.dark
+      brightness: Brightness.light
   ),
   textButtonTheme: TextButtonThemeData(
       style: ButtonStyle(
